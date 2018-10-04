@@ -10,9 +10,9 @@ import sys
 from PyQt5.QtWidgets import QWidget, QLabel, QApplication  
       
 class Example(QWidget):        
-    def __init__(self):  
+    def __init__(s elf):
         super().__init__()            
-        self.initUI()  
+        self.init UI()
           
     def initUI(self):            
         lbl1 = QLabel('欢迎', self)  
