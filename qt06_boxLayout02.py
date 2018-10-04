@@ -14,18 +14,21 @@ class Winform(QWidget):
 	def __init__(self,parent=None):
 		super(Winform,self).__init__(parent)
 		self.setWindowTitle("水平布局管理例子") 
-				
+		self.resize(800, 200)
+		
 		# 水平布局按照从左到右的顺序进行添加按钮部件。
 		hlayout = QHBoxLayout()  
-        		
-		hlayout.addWidget( QPushButton(str(1)) )
-		hlayout.addWidget( QPushButton(str(2)) )
+     
+		#水平居左 垂直居上		
+		hlayout.addWidget( QPushButton(str(1)) , 0 , Qt.AlignLeft | Qt.AlignTop)
+		hlayout.addWidget( QPushButton(str(2)) , 0 , Qt.AlignLeft | Qt.AlignTop)
 		hlayout.addWidget( QPushButton(str(3)))
-		hlayout.addWidget( QPushButton(str(4))  )        
-		hlayout.addWidget( QPushButton(str(5)))    
-        		
-		#设置控件间的间距
-		hlayout.setSpacing( 0 )	
+		#水平居左 垂直居下
+		hlayout.addWidget( QPushButton(str(4)) , 0 , Qt.AlignLeft | Qt.AlignBottom )        
+		hlayout.addWidget( QPushButton(str(5)), 0 , Qt.AlignLeft | Qt.AlignBottom)    
+      
+		
+		
 		self.setLayout(hlayout)   
   
 if __name__ == "__main__":  
